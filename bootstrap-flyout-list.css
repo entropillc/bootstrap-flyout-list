@@ -1,0 +1,64 @@
+ul.flyout-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+ul.flyout-list > li {
+  background: #111 url('images/flyout-list-item-top.png') no-repeat;
+  height: 66px;
+  position: relative;
+  overflow: hidden;
+}
+
+ul.flyout-list > li > a {
+  display: block;
+  height: 50px;
+  padding-top: 10px;
+  overflow: hidden;
+  -webkit-transition: padding-top 0.2s ease;
+  -moz-transition: padding-top 0.2s ease;
+  -o-transition: padding-top 0.2s ease;
+  transition: padding-top 0.2s ease;
+}
+
+ul.flyout-list > li > a:hover {
+  padding-top: 2px;
+}
+
+ul.flyout-list > li > a:after {
+  background: #111 url('images/flyout-list-item-bottom.png') no-repeat;
+  content: "";
+  display: block;
+  width: 220px;
+  height: 16px;
+  position: absolute;
+  top: 50px;
+  -webkit-box-shadow: 0 -1px 10px #000;
+  -moz-box-shadow: 0 -1px 10px #000;
+  box-shadow: 0 -1px 10px #000;
+}
+
+ul.flyout-list > li > a > span.flyout-list-card {
+  background: #f0f0f0 url('images/flyout-list-card-background.png') repeat;
+  display: block;
+  width: 200px;
+  height: 150px;
+  margin-left: 10px;
+  -webkit-box-shadow: 0 0 6px 1px #000;
+  -moz-box-shadow: 0 0 6px 1px #000;
+  box-shadow: 0 0 6px 1px #000;
+}
+
+ul.flyout-list > li:nth-child(odd) > a > span.flyout-list-card {
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+}
+
+ul.flyout-list > li:nth-child(even) > a > span.flyout-list-card {
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+}
