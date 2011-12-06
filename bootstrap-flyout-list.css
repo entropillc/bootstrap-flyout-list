@@ -1,41 +1,41 @@
 ul.flyout-list {
   list-style: none;
   margin-left: 0;
+  overflow: hidden;
 }
 
 ul.flyout-list > li {
   background: #111 url('images/flyout-list-item-top.png') no-repeat;
   height: 66px;
+  overflow: hidden;
   position: relative;
-  overflow: hidden;
 }
 
-ul.flyout-list > li > a {
-  display: block;
-  height: 50px;
-  padding-top: 10px;
-  overflow: hidden;
-  -webkit-transition: padding-top 0.2s ease;
-  -moz-transition: padding-top 0.2s ease;
-  -o-transition: padding-top 0.2s ease;
-  transition: padding-top 0.2s ease;
-}
-
-ul.flyout-list > li > a:hover {
-  padding-top: 2px;
-}
-
-ul.flyout-list > li > a:after {
+ul.flyout-list > li:after {
   background: #111 url('images/flyout-list-item-bottom.png') no-repeat;
   content: "";
   display: block;
   width: 220px;
   height: 16px;
-  position: absolute;
-  top: 50px;
+  position: relative;
   -webkit-box-shadow: 0 -1px 10px #000;
   -moz-box-shadow: 0 -1px 10px #000;
   box-shadow: 0 -1px 10px #000;
+}
+
+ul.flyout-list > li:hover {
+  overflow: visible;
+}
+
+ul.flyout-list > li:hover:after {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+ul.flyout-list > li > a {
+  display: block;
+  height: 50px;
 }
 
 ul.flyout-list > li > a > span.flyout-list-card {
@@ -44,9 +44,19 @@ ul.flyout-list > li > a > span.flyout-list-card {
   width: 200px;
   height: 150px;
   margin-left: 10px;
+  position: relative;
+  top: 10px;
   -webkit-box-shadow: 0 0 6px 1px #000;
   -moz-box-shadow: 0 0 6px 1px #000;
   box-shadow: 0 0 6px 1px #000;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+ul.flyout-list > li > a:hover > span.flyout-list-card {
+  top: -110px;
 }
 
 ul.flyout-list > li:nth-child(odd) > a > span.flyout-list-card {
