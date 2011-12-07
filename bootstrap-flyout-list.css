@@ -23,11 +23,11 @@ ul.flyout-list > li:after {
   box-shadow: 0 -1px 10px #000;
 }
 
-ul.flyout-list > li:hover {
+ul.flyout-list > li.active {
   overflow: visible;
 }
 
-ul.flyout-list > li:hover:after {
+ul.flyout-list > li.active:after {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -38,7 +38,7 @@ ul.flyout-list > li > a {
   height: 50px;
 }
 
-ul.flyout-list > li > a > span.flyout-list-card {
+ul.flyout-list span.flyout-list-card {
   background: #f0f0f0 url('images/flyout-list-card-background.png') repeat;
   display: block;
   width: 200px;
@@ -49,26 +49,44 @@ ul.flyout-list > li > a > span.flyout-list-card {
   -webkit-box-shadow: 0 0 6px 1px #000;
   -moz-box-shadow: 0 0 6px 1px #000;
   box-shadow: 0 0 6px 1px #000;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-ul.flyout-list > li > a:hover > span.flyout-list-card {
-  top: -110px;
+ul.flyout-list > li:nth-child(1n) span.flyout-list-card {
+  -webkit-transform: rotate(-1.2deg);
+  -moz-transform: rotate(-1.2deg);
+  -ms-transform: rotate(-1.2deg);
+  -o-transform: rotate(-1.2deg);
 }
 
-ul.flyout-list > li:nth-child(odd) > a > span.flyout-list-card {
-  -webkit-transform: rotate(-1deg);
-  -moz-transform: rotate(-1deg);
-  -ms-transform: rotate(-1deg);
-  -o-transform: rotate(-1deg);
+ul.flyout-list > li:nth-child(2n) span.flyout-list-card {
+  -webkit-transform: rotate(0.6deg);
+  -moz-transform: rotate(0.6deg);
+  -ms-transform: rotate(0.6deg);
+  -o-transform: rotate(0.6deg);
 }
 
-ul.flyout-list > li:nth-child(even) > a > span.flyout-list-card {
-  -webkit-transform: rotate(1deg);
-  -moz-transform: rotate(1deg);
-  -ms-transform: rotate(1deg);
-  -o-transform: rotate(1deg);
+ul.flyout-list > li:nth-child(3n) span.flyout-list-card {
+  -webkit-transform: rotate(-0.6deg);
+  -moz-transform: rotate(-0.6deg);
+  -ms-transform: rotate(-0.6deg);
+  -o-transform: rotate(-0.6deg);
+}
+
+ul.flyout-list > li:nth-child(4n) span.flyout-list-card {
+  -webkit-transform: rotate(1.2deg);
+  -moz-transform: rotate(1.2deg);
+  -ms-transform: rotate(1.2deg);
+  -o-transform: rotate(1.2deg);
+}
+
+ul.flyout-list > li.active span.flyout-list-card {
+  top: -800px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
 }
