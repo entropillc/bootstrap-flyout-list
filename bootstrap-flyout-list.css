@@ -2,6 +2,8 @@ ul.flyout-list {
   list-style: none;
   margin-left: 0;
   overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: perspective(2000);
 }
 
 ul.flyout-list > li {
@@ -15,7 +17,7 @@ ul.flyout-list > li:after {
   background: #111 url('images/flyout-list-item-bottom.png') no-repeat;
   content: "";
   display: block;
-  width: 220px;
+  width: 240px;
   height: 16px;
   position: relative;
   -webkit-box-shadow: 0 -1px 10px #000;
