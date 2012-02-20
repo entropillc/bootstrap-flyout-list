@@ -3,7 +3,7 @@ ul.flyout-list {
   margin-left: 0;
   overflow: hidden;
   -webkit-transform-style: preserve-3d;
-  -webkit-transform: perspective(2000);
+  -webkit-transform: perspective(2000) translate3d(0, 0, 1px);
 }
 
 ul.flyout-list > li {
