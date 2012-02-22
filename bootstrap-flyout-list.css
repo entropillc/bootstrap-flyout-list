@@ -1,5 +1,7 @@
 ul.flyout-list {
+  display: block;
   list-style: none;
+  width: 240px;
   margin-left: 0;
   overflow: hidden;
   -webkit-transform-style: preserve-3d;
@@ -8,8 +10,10 @@ ul.flyout-list {
 
 ul.flyout-list > li {
   background: #111 url('images/flyout-list-item-top.png') no-repeat;
-  height: 66px;
-  overflow: hidden;
+  display: block;
+  width: 240px;
+  height: 56px;
+  padding-bottom: 16px;
   position: relative;
 }
 
@@ -19,7 +23,9 @@ ul.flyout-list > li:after {
   display: block;
   width: 240px;
   height: 16px;
-  position: relative;
+  position: absolute;
+  top: 56px;
+  left: 0;
   -webkit-box-shadow: 0 -1px 10px #000;
   -moz-box-shadow: 0 -1px 10px #000;
   box-shadow: 0 -1px 10px #000;
@@ -38,6 +44,9 @@ ul.flyout-list > li.active:after {
 ul.flyout-list > li > a {
   display: block;
   height: 50px;
+  color: #404040;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 ul.flyout-list span.flyout-list-card {
@@ -46,7 +55,8 @@ ul.flyout-list span.flyout-list-card {
   width: 200px;
   height: 150px;
   margin-left: 10px;
-  position: relative;
+  padding: 0 10px;
+  position: absolute;
   top: 10px;
   -webkit-box-shadow: 0 0 6px 1px #000;
   -moz-box-shadow: 0 0 6px 1px #000;

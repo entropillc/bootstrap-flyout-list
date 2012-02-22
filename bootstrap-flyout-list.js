@@ -17,7 +17,28 @@ $(function() {
     });
   });
   
-  $('ul.flyout-list').delegate('a', 'click', function(evt) {
+  var $flyoutLists = $('ul.flyout-list');
+  var isMouseDown = false;
+  
+  $flyoutLists.delegate('a', 'mousedown touchstart', function(evt) {
+    isMouseDown = true;
+    evt.preventDefault();
+  });
+  
+  $flyoutLists.delegate('a', 'mousemove touchmove', function(evt) {
+    if (!isMouseDown) return;
+    
+    isMouseDown = false;
+  });
+  
+  $flyoutLists.delegate('a', 'mouseup touchend', function(evt) {
+    if (!isMouseDown) return;
+    
+    isMouseDown = false;
+    $(this).trigger('click');
+  });
+  
+  $flyoutLists.delegate('a', 'click', function(evt) {
     var $this = $(this);
     var $listItem = $this.parent();
     var $list = $listItem.parent();
@@ -38,5 +59,7 @@ $(function() {
       var closeDrawer = $slidingDrawer.data('closeDrawer');
       if (closeDrawer) closeDrawer();
     }
+    
+    evt.preventDefault();
   });
 });
