@@ -42,7 +42,7 @@ $(function() {
     var $this = $(this);
     var $listItem = $this.parent();
     var $list = $listItem.parent();
-    var $slidingDrawer = $list.parent('.drawer');
+    var $slidingDrawer = $list.parents('.drawer:first');
     var href = $this.attr('href');
     var $modal = $(href);
     
