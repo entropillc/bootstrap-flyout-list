@@ -6,10 +6,10 @@ ul.flyout-list {
   overflow: hidden;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: perspective(2000) translate3d(0, 0, 1px);
-  -moz-transform: perspective(2000) translate3d(0, 0, 1px);
-  -ms-transform: perspective(2000) translate3d(0, 0, 1px);
-  -o-transform: perspective(2000) translate3d(0, 0, 1px);
-  transform: perspective(2000) translate3d(0, 0, 1px);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 ul.flyout-list > li {
@@ -73,7 +73,7 @@ ul.flyout-list span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(1n) span.flyout-list-card {
-  -webkit-transform: rotate(-1.2deg);
+  -webkit-transform: rotate3d(0, 0, 0, -1.2deg);
   -moz-transform: rotate(-1.2deg);
   -ms-transform: rotate(-1.2deg);
   -o-transform: rotate(-1.2deg);
@@ -81,7 +81,7 @@ ul.flyout-list > li:nth-child(1n) span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(2n) span.flyout-list-card {
-  -webkit-transform: rotate(0.6deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0.6deg);
   -moz-transform: rotate(0.6deg);
   -ms-transform: rotate(0.6deg);
   -o-transform: rotate(0.6deg);
@@ -89,7 +89,7 @@ ul.flyout-list > li:nth-child(2n) span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(3n) span.flyout-list-card {
-  -webkit-transform: rotate(-0.6deg);
+  -webkit-transform: rotate3d(0, 0, 0, -0.6deg);
   -moz-transform: rotate(-0.6deg);
   -ms-transform: rotate(-0.6deg);
   -o-transform: rotate(-0.6deg);
@@ -97,7 +97,7 @@ ul.flyout-list > li:nth-child(3n) span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(4n) span.flyout-list-card {
-  -webkit-transform: rotate(1.2deg);
+  -webkit-transform: rotate3d(0, 0, 0, 1.2deg);
   -moz-transform: rotate(1.2deg);
   -ms-transform: rotate(1.2deg);
   -o-transform: rotate(1.2deg);
@@ -105,9 +105,9 @@ ul.flyout-list > li:nth-child(4n) span.flyout-list-card {
 }
 
 ul.flyout-list > li.active span.flyout-list-card {
-  -webkit-transform: translate3d(0, -800px, 0) rotate(0deg);
-  -moz-transform: translate3d(0, -800px, 0) rotate(0deg);
-  -ms-transform: translate3d(0, -800px, 0) rotate(0deg);
-  -o-transform: translate3d(0, -800px, 0) rotate(0deg);
-  transform: translate3d(0, -800px, 0) rotate(0deg);
+  -webkit-transform: translate3d(0, -800px, 0) rotate3d(0, 0, 0, 0deg);
+  -moz-transform: translate(0, -800px) rotate(0deg);
+  -ms-transform: translate(0, -800px) rotate(0deg);
+  -o-transform: translate(0, -800px) rotate(0deg);
+  transform: translate(0, -800px) rotate(0deg);
 }
