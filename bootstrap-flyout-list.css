@@ -73,7 +73,7 @@ ul.flyout-list span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(1n) span.flyout-list-card {
-  -webkit-transform: rotate3d(0, 0, 0, -1.2deg);
+  -webkit-transform: rotate3d(0, 0, 1, -1.2deg);
   -moz-transform: rotate(-1.2deg);
   -ms-transform: rotate(-1.2deg);
   -o-transform: rotate(-1.2deg);
@@ -81,7 +81,7 @@ ul.flyout-list > li:nth-child(1n) span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(2n) span.flyout-list-card {
-  -webkit-transform: rotate3d(0, 0, 0, 0.6deg);
+  -webkit-transform: rotate3d(0, 0, 1, 0.6deg);
   -moz-transform: rotate(0.6deg);
   -ms-transform: rotate(0.6deg);
   -o-transform: rotate(0.6deg);
@@ -89,7 +89,7 @@ ul.flyout-list > li:nth-child(2n) span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(3n) span.flyout-list-card {
-  -webkit-transform: rotate3d(0, 0, 0, -0.6deg);
+  -webkit-transform: rotate3d(0, 0, 1, -0.6deg);
   -moz-transform: rotate(-0.6deg);
   -ms-transform: rotate(-0.6deg);
   -o-transform: rotate(-0.6deg);
@@ -97,7 +97,7 @@ ul.flyout-list > li:nth-child(3n) span.flyout-list-card {
 }
 
 ul.flyout-list > li:nth-child(4n) span.flyout-list-card {
-  -webkit-transform: rotate3d(0, 0, 0, 1.2deg);
+  -webkit-transform: rotate3d(0, 0, 1, 1.2deg);
   -moz-transform: rotate(1.2deg);
   -ms-transform: rotate(1.2deg);
   -o-transform: rotate(1.2deg);
