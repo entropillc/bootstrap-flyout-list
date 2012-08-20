@@ -6,6 +6,10 @@ ul.flyout-list {
   overflow: hidden;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: perspective(2000) translate3d(0, 0, 1px);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 ul.flyout-list > li {
@@ -63,42 +67,47 @@ ul.flyout-list span.flyout-list-card {
   box-shadow: 0 0 6px 1px #000;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 ul.flyout-list > li:nth-child(1n) span.flyout-list-card {
-  -webkit-transform: rotate(-1.2deg);
+  -webkit-transform: rotate3d(0, 0, 1, -1.2deg);
   -moz-transform: rotate(-1.2deg);
   -ms-transform: rotate(-1.2deg);
   -o-transform: rotate(-1.2deg);
+  transform: rotate(-1.2deg);
 }
 
 ul.flyout-list > li:nth-child(2n) span.flyout-list-card {
-  -webkit-transform: rotate(0.6deg);
+  -webkit-transform: rotate3d(0, 0, 1, 0.6deg);
   -moz-transform: rotate(0.6deg);
   -ms-transform: rotate(0.6deg);
   -o-transform: rotate(0.6deg);
+  transform: rotate(0.6deg);
 }
 
 ul.flyout-list > li:nth-child(3n) span.flyout-list-card {
-  -webkit-transform: rotate(-0.6deg);
+  -webkit-transform: rotate3d(0, 0, 1, -0.6deg);
   -moz-transform: rotate(-0.6deg);
   -ms-transform: rotate(-0.6deg);
   -o-transform: rotate(-0.6deg);
+  transform: rotate(-0.6deg);
 }
 
 ul.flyout-list > li:nth-child(4n) span.flyout-list-card {
-  -webkit-transform: rotate(1.2deg);
+  -webkit-transform: rotate3d(0, 0, 1, 1.2deg);
   -moz-transform: rotate(1.2deg);
   -ms-transform: rotate(1.2deg);
   -o-transform: rotate(1.2deg);
+  transform: rotate(1.2deg);
 }
 
 ul.flyout-list > li.active span.flyout-list-card {
-  top: -800px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
+  -webkit-transform: translate3d(0, -800px, 0) rotate3d(0, 0, 0, 0deg);
+  -moz-transform: translate(0, -800px) rotate(0deg);
+  -ms-transform: translate(0, -800px) rotate(0deg);
+  -o-transform: translate(0, -800px) rotate(0deg);
+  transform: translate(0, -800px) rotate(0deg);
 }
